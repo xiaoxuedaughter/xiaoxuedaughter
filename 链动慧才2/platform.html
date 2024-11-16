@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>链动慧才 - 主页</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="platform.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="platform-container">
+        <!-- 顶部导航栏 -->
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="链动慧才" class="logo-img">
+                <span>链动慧才</span>
+            </div>
+
+            <!-- 投资者导航 -->
+            <div class="nav-links investor-nav">
+                <a href="#" class="active"><i class="fas fa-home"></i> 投资概览</a>
+                <a href="#"><i class="fas fa-project-diagram"></i> 投资项目</a>
+                <a href="#"><i class="fas fa-user-graduate"></i> 人才项目</a>
+                <a href="#"><i class="fas fa-chart-line"></i> 投资市场</a>
+                <a href="#"><i class="fas fa-wallet"></i> 资金管理</a>
+            </div>
+
+            <!-- 发行者导航 -->
+            <div class="nav-links issuer-nav" style="display: none;">
+                <a href="#" class="active"><i class="fas fa-tasks"></i> 项目管理</a>
+                <a href="#"><i class="fas fa-user-graduate"></i> 人才项目</a>
+                <a href="#"><i class="fas fa-comments"></i> 投资者互动</a>
+                <a href="#"><i class="fas fa-chart-bar"></i> 数据分析</a>
+                <a href="#"><i class="fas fa-plus-circle"></i> 发布项目</a>
+            </div>
+
+            <!-- 管理员导航 -->
+            <div class="nav-links admin-nav" style="display: none;">
+                <a href="#" class="active"><i class="fas fa-users-cog"></i> 用户管理</a>
+                <a href="#"><i class="fas fa-clipboard-check"></i> 项目审核</a>
+                <a href="#"><i class="fas fa-chart-pie"></i> 数据分析</a>
+                <a href="#"><i class="fas fa-comments"></i> 论坛管理</a>
+                <a href="#"><i class="fas fa-cog"></i> 系统置</a>
+            </div>
+
+            <div class="user-info">
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">2</span>
+                </div>
+                <div class="user-dropdown">
+                    <img src="images/avatar-default.png" alt="用户头像" class="avatar-img">
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> 个人资料</a>
+                        <a href="#"><i class="fas fa-cog"></i> 账户设置</a>
+                        <a href="index.html"><i class="fas fa-sign-out-alt"></i> 退出登录</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主要内容区域 -->
+        <div class="main-content">
+            <!-- 投资者界面 -->
+            <div class="investor-dashboard">
+                <!-- 投资概览 -->
+                <div class="dashboard-header">
+                    <h2>投资概览</h2>
+                    <button class="view-details-btn">查看详情</button>
+                </div>
+
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-wallet"></i></div>
+                        <div class="stat-info">
+                            <h3>总资产</h3>
+                            <p>¥1,234,567</p>
+                            <span class="trend up">+2.5% <i class="fas fa-arrow-up"></i></span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="stat-info">
+                            <h3>投资项目</h3>
+                            <p>12个</p>
+                            <span class="trend">活跃：8个</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="stat-info">
+                            <h3>累计收益</h3>
+                            <p>¥123,456</p>
+                            <span class="trend up">+15.8% <i class="fas fa-arrow-up"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 投资项目列表 -->
+                <div class="investment-projects">
+                    <div class="section-header">
+                        <h3>投资项目</h3>
+                        <div class="filters">
+                            <select class="status-filter">
+                                <option value="all">全部项目</option>
+                                <option value="active">进行中</option>
+                                <option value="completed">已完成</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th>项目名称</th>
+                                <th>投资金额</th>
+                                <th>投资日期</th>
+                                <th>预期收益</th>
+                                <th>当前收益</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>科技创新基金A</td>
+                                <td>¥100,000</td>
+                                <td>2024-03-15</td>
+                                <td>15%</td>
+                                <td>¥8,500</td>
+                                <td><span class="status-badge active">进行中</span></td>
+                                <td>
+                                    <button class="action-btn view-details">查看详情</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 资金管理 -->
+                <div class="fund-management">
+                    <div class="section-header">
+                        <h3>资金管理</h3>
+                    </div>
+                    <div class="fund-actions">
+                        <button class="fund-btn deposit">
+                            <i class="fas fa-plus-circle"></i>
+                            充值
+                        </button>
+                        <button class="fund-btn withdraw">
+                            <i class="fas fa-minus-circle"></i>
+                            提现
+                        </button>
+                        <button class="fund-btn distribute">
+                            <i class="fas fa-random"></i>
+                            收益分配
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 发行者界面 -->
+            <div class="issuer-dashboard" style="display: none;">
+                <!-- 项目管理 -->
+                <div class="dashboard-header">
+                    <h2>项目管理</h2>
+                    <button class="new-project-btn">发布新项目</button>
+                </div>
+
+                <div class="projects-list">
+                    <table class="projects-table">
+                        <thead>
+                            <tr>
+                                <th>项目名称</th>
+                                <th>目标金额</th>
+                                <th>已募集</th>
+                                <th>投资人数</th>
+                                <th>发布时间</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>创新科技项目A</td>
+                                <td>¥1,000,000</td>
+                                <td>¥800,000</td>
+                                <td>45</td>
+                                <td>2024-03-01</td>
+                                <td><span class="status-badge active">募集中</span></td>
+                                <td>
+                                    <button class="action-btn edit">编辑</button>
+                                    <button class="action-btn manage">管理</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 管理员界面 -->
+            <div class="admin-dashboard" style="display: none;">
+                <!-- 用户管理 -->
+                <div class="dashboard-header">
+                    <h2>用户管理</h2>
+                </div>
+
+                <div class="user-management">
+                    <div class="filter-bar">
+                        <input type="text" placeholder="搜索用户...">
+                        <select>
+                            <option value="all">所有用户</option>
+                            <option value="investor">投资者</option>
+                            <option value="issuer">发行者</option>
+                            <option value="admin">管理员</option>
+                        </select>
+                        <button class="search-btn">搜索</button>
+                    </div>
+
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>用户ID</th>
+                                <th>用户名</th>
+                                <th>角色</th>
+                                <th>注册时间</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1001</td>
+                                <td>张三</td>
+                                <td>投资者</td>
+                                <td>2024-01-15</td>
+                                <td><span class="status-badge active">常</span></td>
+                                <td>
+                                    <button class="action-btn edit">编辑</button>
+                                    <button class="action-btn disable">禁用</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="platform.js"></script>
+</body>
+</html> 

@@ -1,0 +1,882 @@
+/* 基础样式 */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* 顶部导航栏 */
+.top-nav {
+    background: linear-gradient(135deg, #8B0000 0%, #800020 100%); /* 深红色渐变 */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFD700; /* 金色文字 */
+    border-bottom: 2px solid #D4AF37; /* 金色边框 */
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #FFD700; /* 金色文字 */
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 215, 0, 0.1); /* 淡金色背景 */
+    transform: translateY(-2px);
+}
+
+.nav-links a.active {
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid #D4AF37;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* 主要内容区域 */
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* 侧边栏 */
+.sidebar {
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.sidebar li a.active {
+    background-color: #e6f7ff;
+    color: #1890ff;
+}
+
+/* 内容区域 */
+.content {
+    flex: 1;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 项目卡片 */
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project-header h3 {
+    margin: 0;
+}
+
+.tag {
+    background-color: #e6f7ff;
+    color: #1890ff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.project-info {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-btn {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: #40a9ff;
+}
+
+/* 卡片悬停效果 */
+.project-card {
+    transition: box-shadow 0.3s ease;
+}
+
+/* 按钮悬停效果 */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.search-bar button:hover {
+    background-color: #40a9ff;
+}
+
+/* 通知图标悬停效果 */
+.notification {
+    cursor: pointer;
+}
+
+.notification:hover {
+    opacity: 0.8;
+}
+
+/* 用户头像悬停效果 */
+.avatar {
+    cursor: pointer;
+}
+
+.avatar:hover {
+    opacity: 0.8;
+}
+
+/* 添加动画效果 */
+.project-card, .contact-btn, .nav-links a {
+    transition: all 0.3s ease;
+}
+
+/* 论坛样式 */
+.forum-list {
+    margin-top: 20px;
+}
+
+.resume-filters {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: 1px solid #1890ff;
+    background: white;
+    color: #1890ff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #1890ff;
+    color: white;
+}
+
+.resume-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.school-tag {
+    background: #f6ffed;
+    color: #52c41a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.resume-info {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.resume-info p {
+    margin: 8px 0;
+    color: #666;
+}
+
+.resume-contact {
+    display: flex;
+    gap: 10px;
+}
+
+.wechat-btn, .phone-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.wechat-btn {
+    background: #52c41a;
+    color: white;
+}
+
+.phone-btn {
+    background: #1890ff;
+    color: white;
+}
+
+.wechat-btn:hover, .phone-btn:hover {
+    opacity: 0.8;
+}
+
+/* Logo 图片样式 */
+.logo-img {
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* 头像样式 */
+.avatar-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #D4AF37;
+}
+
+/* 通知图标样式 */
+.bell-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.resume-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 下拉菜单样式 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #FFF5EE;
+    border: 1px solid #D4AF37;
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: rgba(139, 0, 0, 0.1);
+}
+
+/* 状态标签样式 */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    background: #FFF5EE;
+    border: 1px solid #8B0000;
+    color: #8B0000;
+}
+
+.status-badge.active {
+    background: #8B0000;
+    color: #FFD700;
+}
+
+/* 卡片悬停效果 */
+.stat-card {
+    background: linear-gradient(135deg, #FFF5EE 0%, #FFFAFA 100%); /* 淡雅米色渐变 */
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
+}
+
+/* 表格行悬停效果 */
+.projects-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.projects-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 人才项目样式 */
+.talent-projects {
+    padding: 20px;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filter-bar select,
+.filter-bar input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.talent-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.talent-card:hover {
+    transform: translateY(-5px);
+}
+
+.talent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.talent-basic {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.talent-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.talent-info h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.talent-info p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.talent-content {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.achievements h4,
+.skills h4 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.achievements ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #666;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #f5f5f5;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.talent-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.action-btn.view-detail {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.action-btn.invest {
+    background: #2a5298;
+    color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+/* 投资意向表单样式 */
+.investment-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background: #2a5298;
+    color: white;
+}
+
+.cancel-btn {
+    background: #f5f5f5;
+    color: #666;
+}
+
+/* 人才详情页面样式 */
+.talent-detail {
+    padding: 20px;
+}
+
+.back-btn {
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.talent-profile {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.profile-tag {
+    background: #f5f5f5;
+    color: #666;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-section h4 {
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2a5298;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h5 {
+    color: #2a5298;
+    margin: 0 0 5px 0;
+}
+
+.education-item p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.awards-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.awards-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.awards-list li:last-child {
+    border-bottom: none;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.project-item h5 {
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.project-role {
+    color: #2a5298;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.skills-chart {
+    margin-top: 15px;
+}
+
+.skill-bar {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: inline-block;
+    width: 100px;
+    color: #666;
+}
+
+.bar-container {
+    display: inline-block;
+    width: calc(100% - 120px);
+    height: 8px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.bar {
+    height: 100%;
+    background: #2a5298;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.contact-btn {
+    padding: 8px 20px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    background: #1e3c72;
+}
+
+/* 数据分析样式 */
+.issuer-analysis {
+    padding: 20px;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.chart-card {
+    background: linear-gradient(135deg, #FFF5EE 0%, #FFFAFA 100%);
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.1);
+}
+
+.chart-card h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-range input[type="date"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.query-btn {
+    padding: 8px 20px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.query-btn:hover {
+    background: #1e3c72;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    /* 顶部导航栏 */
+    .top-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin: 2px 0;
+    }
+
+    /* 统计卡片 */
+    .stats-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* 表格适配 */
+    .projects-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* 筛选栏 */
+    .filter-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-bar select,
+    .filter-bar input {
+        width: 100%;
+    }
+
+    /* 人才卡片 */
+    .talent-card {
+        padding: 15px;
+    }
+
+    .talent-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .talent-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .talent-footer button {
+        width: 100%;
+    }
+
+    /* 用户信息区域 */
+    .user-info {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+}
+
+/* 小屏幕手机适配 */
+@media screen and (max-width: 480px) {
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .talent-basic {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skill-tags {
+        justify-content: center;
+    }
+} 
